@@ -51,7 +51,7 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/flutter_lints-3.0.2",
+      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
@@ -60,6 +60,12 @@
       "rootUri": "file:///usr/local/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.2"
+    },
+    {
+      "name": "get",
+      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/get-4.6.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.15"
     },
     {
       "name": "leak_tracker",
@@ -81,9 +87,9 @@
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/lints-3.0.0",
+      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/lints-4.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.1"
     },
     {
       "name": "matcher",
@@ -170,7 +176,7 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-03T09:35:07.865682Z",
+  "generated": "2024-05-10T10:25:46.157131Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
