@@ -542,13 +542,13 @@
       "languageVersion": "3.2"
     },
     {
-      "name": "mobileapp",
+      "name": "Citizen.Tech",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-14T15:22:47.018924Z",
+  "generated": "2024-05-15T16:07:41.934800Z",
   "generator": "pub",
   "generatorVersion": "3.3.4"
 }
