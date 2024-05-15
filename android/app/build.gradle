@@ -24,7 +24,6 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.mobileapp"
-    compileSdk localProperties.getProperty('flutter.compileSdkVersion').toInteger()
     compileSdkVersion localProperties.getProperty('flutter.compileSdkVersion').toInteger()
     ndkVersion flutter.ndkVersion
 
