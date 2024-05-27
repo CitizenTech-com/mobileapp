@@ -2,544 +2,220 @@
   "configVersion": 2,
   "packages": [
     {
-      "name": "amplify_analytics_pinpoint",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_analytics_pinpoint-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_analytics_pinpoint_dart",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_analytics_pinpoint_dart-0.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_auth_cognito",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_auth_cognito-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_auth_cognito_dart",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_auth_cognito_dart-0.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_core",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_core-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_db_common",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_db_common-0.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_db_common_dart",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_db_common_dart-0.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_flutter",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_flutter-2.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_secure_storage",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_secure_storage-0.5.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "amplify_secure_storage_dart",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/amplify_secure_storage_dart-0.5.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
       "name": "async",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/async-2.11.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/async-2.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
-      "name": "aws_common",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/aws_common-0.7.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "aws_signature_v4",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/aws_signature_v4-0.6.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
       "name": "boolean_selector",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/boolean_selector-2.1.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
-      "name": "built_collection",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/built_collection-5.1.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "built_value",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/built_value-8.9.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "characters",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/characters-1.3.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/characters-1.3.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "clock",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/clock-1.1.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/clock-1.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/collection-1.18.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/collection-1.18.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
-    },
-    {
-      "name": "convert",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/convert-3.1.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.18"
-    },
-    {
-      "name": "crclib",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/crclib-3.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "crypto",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/crypto-3.0.3",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
     },
     {
       "name": "cupertino_icons",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
-      "name": "device_info_plus",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/device_info_plus-10.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "device_info_plus_platform_interface",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/device_info_plus_platform_interface-7.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "drift",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/drift-2.14.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "fake_async",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/fake_async-1.3.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/fake_async-1.3.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
-    },
-    {
-      "name": "ffi",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/ffi-2.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "file",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/file-7.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "fixnum",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/fixnum-1.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
     },
     {
       "name": "flutter",
-      "rootUri": "file:///usr/local/flutter/packages/flutter",
+      "rootUri": "file:///C:/Flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/flutter_lints-4.0.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///usr/local/flutter/packages/flutter_test",
+      "rootUri": "file:///C:/Flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "3.2"
+      "languageVersion": "3.3"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///usr/local/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///C:/Flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
       "name": "get",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/get-4.6.6",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/get-4.6.6",
       "packageUri": "lib/",
       "languageVersion": "2.15"
     },
     {
-      "name": "graphs",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/graphs-2.3.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.18"
-    },
-    {
-      "name": "http",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/http-1.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "http2",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/http2-2.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "http_parser",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/http_parser-4.0.2",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
-      "name": "intl",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/intl-0.19.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "js",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/js-0.6.7",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
-      "name": "json_annotation",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/json_annotation-4.8.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/js-0.6.7",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
       "name": "leak_tracker",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/leak_tracker-10.0.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_flutter_testing",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-2.0.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.3",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.2"
     },
     {
       "name": "leak_tracker_testing",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/leak_tracker_testing-2.0.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker_testing-3.0.1",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.2"
     },
     {
       "name": "lints",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/lints-4.0.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/lints-4.0.0",
       "packageUri": "lib/",
       "languageVersion": "3.1"
     },
     {
-      "name": "logging",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/logging-1.2.0",
+      "name": "location",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/location-5.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.19"
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "location_platform_interface",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/location_platform_interface-3.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
+    },
+    {
+      "name": "location_web",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/location_web-4.2.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.18"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/matcher-0.12.16+1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/material_color_utilities-0.8.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/material_color_utilities-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/meta-1.11.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "mime",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/mime-1.0.5",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "oauth2",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/oauth2-2.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "os_detect",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/os_detect-2.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "package_info_plus",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/package_info_plus-6.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "package_info_plus_platform_interface",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/package_info_plus_platform_interface-2.0.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/meta-1.12.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path-1.9.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "path_provider",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path_provider-2.1.3",
-      "packageUri": "lib/",
-      "languageVersion": "3.1"
-    },
-    {
-      "name": "path_provider_android",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path_provider_android-2.2.4",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "path_provider_foundation",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "path_provider_linux",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
-      "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path_provider_platform_interface-2.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "path_provider_windows",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/path_provider_windows-2.2.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.19"
-    },
-    {
-      "name": "petitparser",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/petitparser-6.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
-    },
-    {
-      "name": "platform",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/platform-3.1.4",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
-    },
-    {
-      "name": "retry",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/retry-3.1.2",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "shelf",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/shelf-1.4.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///usr/local/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///C:/Flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "3.2"
     },
     {
-      "name": "smithy",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/smithy-0.7.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "smithy_aws",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/smithy_aws-0.7.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
       "name": "source_span",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/source_span-1.10.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/source_span-1.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
-      "name": "sprintf",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/sprintf-7.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
-      "name": "sqlite3",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/sqlite3-2.4.3",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
       "name": "stack_trace",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/stack_trace-1.11.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/stack_trace-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/stream_channel-2.1.2",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/stream_channel-2.1.2",
       "packageUri": "lib/",
       "languageVersion": "2.19"
     },
     {
-      "name": "stream_transform",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/stream_transform-2.1.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.14"
-    },
-    {
       "name": "string_scanner",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/string_scanner-1.2.0",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/string_scanner-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "term_glyph",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/term_glyph-1.2.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/test_api-0.6.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/test_api-0.7.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
-    },
-    {
-      "name": "tuple",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/tuple-2.0.2",
-      "packageUri": "lib/",
-      "languageVersion": "2.17"
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/typed_data-1.3.2",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
-      "name": "uuid",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/uuid-4.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
       "name": "vector_math",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/vector_math-2.1.4",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/vector_math-2.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
     {
       "name": "vm_service",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/vm_service-13.0.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "web",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/web-0.5.1",
+      "rootUri": "file:///C:/Users/HP/AppData/Local/Pub/Cache/hosted/pub.dev/vm_service-14.2.1",
       "packageUri": "lib/",
       "languageVersion": "3.3"
-    },
-    {
-      "name": "win32",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/win32-5.5.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "win32_registry",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/win32_registry-1.1.3",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "worker_bee",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/worker_bee-0.3.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.3"
-    },
-    {
-      "name": "xdg_directories",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/xdg_directories-1.0.4",
-      "packageUri": "lib/",
-      "languageVersion": "3.0"
-    },
-    {
-      "name": "xml",
-      "rootUri": "file:///Users/amitdubey/.pub-cache/hosted/pub.dev/xml-6.5.0",
-      "packageUri": "lib/",
-      "languageVersion": "3.2"
     },
     {
       "name": "Citizen.Tech",
@@ -548,7 +224,10 @@
       "languageVersion": "3.3"
     }
   ],
-  "generated": "2024-05-15T16:07:41.934800Z",
+  "generated": "2024-05-22T09:30:20.170163Z",
   "generator": "pub",
-  "generatorVersion": "3.3.4"
+  "generatorVersion": "3.4.0",
+  "flutterRoot": "file:///C:/Flutter",
+  "flutterVersion": "3.22.0",
+  "pubCache": "file:///C:/Users/HP/AppData/Local/Pub/Cache"
 }
