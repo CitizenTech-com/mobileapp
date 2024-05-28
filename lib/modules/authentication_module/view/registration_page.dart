@@ -1,19 +1,19 @@
+import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
 import 'package:Citizen.Tech/modules/authentication_module/controller/registration.controller.dart';
+import 'package:Citizen.Tech/utils/colors.dart';
+import 'package:Citizen.Tech/utils/images.dart';
+import 'package:Citizen.Tech/utils/routes.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
+import 'package:Citizen.Tech/widgets/custom.button.dart';
 import 'package:Citizen.Tech/widgets/custom.divider.dart';
+import 'package:Citizen.Tech/widgets/text.fields.dart';
+import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../constants/themes.dart';
-import '../../../utils/colors.dart';
-import '../../../utils/images.dart';
-import '../../../utils/routes.dart';
-import '../../../widgets/custom.button.dart';
-import '../../../widgets/text.fields.dart';
-import '../../../widgets/texts.dart';
 
 class RegistrationPage extends GetView<RegistrationController> {
   const RegistrationPage({Key? key}) : super(key: key);
@@ -251,7 +251,6 @@ class RegistrationPage extends GetView<RegistrationController> {
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
                     Get.toNamed(Routes.login);
-                    // navigate to desired screen
                   })
           ]),
     );

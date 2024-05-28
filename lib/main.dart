@@ -3,11 +3,8 @@ import 'package:Citizen.Tech/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'modules/authentication_module/controller/login.controller.dart';
 
 void main() {
-  Get.put(LoginController());
-
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then((_) {

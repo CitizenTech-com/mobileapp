@@ -1,14 +1,14 @@
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
 import 'package:Citizen.Tech/utils/colors.dart';
+import 'package:Citizen.Tech/utils/images.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
+import 'package:Citizen.Tech/widgets/custom.button.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import '../../../utils/images.dart';
-import '../../../widgets/custom.button.dart';
 
 class OTPPage extends StatelessWidget {
   final TextEditingController controller = TextEditingController();

@@ -2,7 +2,6 @@
 
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
-import 'package:Citizen.Tech/extensions/widget.extensions.dart';
 import 'package:Citizen.Tech/modules/splash_module/controller/splash.controller.dart';
 import 'package:Citizen.Tech/utils/colors.dart';
 import 'package:Citizen.Tech/utils/images.dart';
@@ -10,7 +9,6 @@ import 'package:Citizen.Tech/utils/routes.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
 import 'package:Citizen.Tech/widgets/custom.button.dart';
-import 'package:Citizen.Tech/widgets/empty.widget.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';

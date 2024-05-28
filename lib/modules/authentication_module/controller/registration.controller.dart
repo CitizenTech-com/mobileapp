@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:Citizen.Tech/modules/authentication_module/repo/registration.repo.dart';
 import 'package:get/get.dart';
 
 class RegistrationController extends GetxController {
-  late GlobalKey<FormState> formKey;
+  final RegistrationRepository repo;
   final RxString userName = "".obs;
   final RxString email = "".obs;
   final RxString phone = "".obs;
@@ -10,4 +10,5 @@ class RegistrationController extends GetxController {
   final RxString address = "".obs;
   final RxString password = "".obs;
   final RxString confirmPassword = "".obs;
+  RegistrationController({required this.repo});
 }
