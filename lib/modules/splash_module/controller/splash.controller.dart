@@ -29,6 +29,7 @@ class SplashController extends GetxController {
 
   getLocation() async {
     Position currentLocation = await _getCurrentLocation();
+    print(currentLocation.latitude);
     // call api to current location data on server.
   }
 }

@@ -1,10 +1,8 @@
+import 'package:Citizen.Tech/extensions/number.extensions.dart';
 import 'package:Citizen.Tech/modules/authentication_module/controller/registration.controller.dart';
-import 'package:Citizen.Tech/modules/authentication_module/view/login_screen.dart';
-import 'package:Citizen.Tech/widgets/app.background.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
 import 'package:Citizen.Tech/widgets/custom.divider.dart';
-import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -12,72 +10,41 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../constants/themes.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/images.dart';
+import '../../../utils/routes.dart';
 import '../../../widgets/custom.button.dart';
-import '../../../widgets/space.dart';
 import '../../../widgets/text.fields.dart';
 import '../../../widgets/texts.dart';
 
-class RegistrationScreen extends StatefulWidget {
-  const RegistrationScreen({Key? key}) : super(key: key);
-
-  @override
-  State<RegistrationScreen> createState() => _RegistrationScreenState();
-}
-
-class _RegistrationScreenState extends State<RegistrationScreen> {
-  bool isChecked = false;
-  late RegistrationController registrationController;
-
-  @override
-  void initState() {
-    registrationController = Get.put(RegistrationController());
-    // TODO: implement initState
-    super.initState();
-  }
+class RegistrationPage extends GetView<RegistrationController> {
+  const RegistrationPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AppBackground(
-      image: Images.splashBg,
-      child: DefaultAppLayout(
-        child: ColorfulSafeArea(
-          color: Colors.black,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                Space().setVertical(0.02),
-                header(),
-                Space().setVertical(0.04),
-                userInputFields(),
-                const SizedBox(
-                  height: 28,
-                ),
-                termsCondition(),
-                const SizedBox(
-                  height: 15,
-                ),
-                signUpButton(),
-                const SizedBox(
-                  height: 20,
-                ),
-                alreadyHaveAccount(),
-                const SizedBox(
-                  height: 15,
-                ),
-                const CustomDivider(),
-                const SizedBox(
-                  height: 15,
-                ),
-                connectWithText(),
-                Space().setVertical(0.06),
-                socialMediaButtons(),
-                Space().setVertical(0.12),
-              ],
-            ),
+    return DefaultAppLayout(
+        bgImage: Images.splashBg,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              60.verticalSpace(),
+              header(),
+              40.verticalSpace(),
+              userInputFields(),
+              28.verticalSpace(),
+              termsCondition(),
+              15.verticalSpace(),
+              signUpButton(),
+              20.verticalSpace(),
+              alreadyHaveAccount(),
+              15.verticalSpace(),
+              const CustomDivider(),
+              15.verticalSpace(),
+              connectWithText(),
+              40.verticalSpace(),
+              socialMediaButtons(),
+              80.verticalSpace(),
+            ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 
   header() {
@@ -108,50 +75,50 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         child: Column(
           children: [
             InputTextField(
-                controller: registrationController.userName,
                 hintText: "User Name",
+                onChanged: (value) => controller.userName(value),
                 isBorder: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                controller: registrationController.email,
                 hintText: "Email",
+                onChanged: (value) => controller.email(value),
                 isBorder: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                controller: registrationController.phone,
                 hintText: "Phone",
+                onChanged: (value) => controller.phone(value),
                 isBorder: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                controller: registrationController.postCode,
                 hintText: "Post Code",
+                onChanged: (value) => controller.postCode(value),
                 isBorder: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                controller: registrationController.address,
                 hintText: "Address",
+                onChanged: (value) => controller.address(value),
                 isBorder: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                controller: registrationController.password,
                 hintText: "Password",
+                onChanged: (value) => controller.password(value),
                 isBorder: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                controller: registrationController.confirmPassword,
                 hintText: "Confirm Password",
+                onChanged: (value) => controller.confirmPassword(value),
                 isBorder: true),
           ],
         ),
@@ -173,12 +140,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               color: MyColors.white,
               width: 1.5,
             ),
-            value: isChecked,
-            onChanged: (value) {
-              setState(() {
-                isChecked = value!;
-              });
-            },
+            value: false,
+            onChanged: (bool? value) {},
+            // onChanged: (value) {
+            //   setState(() {
+            //     isChecked = value!;
+            //   });
+            // },
           ),
           Flexible(
             child: RichText(
@@ -251,7 +219,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   signUpButton() {
     return CustomButton(
       onPressed: () {
-        Get.to(const RegistrationScreen());
+        // Get.toNamed(Routes.registration);
       },
       width: Get.width,
       text: "Sign Up",
@@ -282,7 +250,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         decoration: TextDecoration.underline)),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () {
-                    Get.to(LoginScreen());
+                    Get.toNamed(Routes.login);
                     // navigate to desired screen
                   })
           ]),

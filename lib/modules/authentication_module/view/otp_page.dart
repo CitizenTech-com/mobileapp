@@ -1,51 +1,30 @@
 import 'package:Citizen.Tech/constants/themes.dart';
-import 'package:Citizen.Tech/modules/authentication_module/controller/otp.controller.dart';
+import 'package:Citizen.Tech/extensions/number.extensions.dart';
 import 'package:Citizen.Tech/utils/colors.dart';
-import 'package:Citizen.Tech/widgets/app.background.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
-import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-
 import '../../../utils/images.dart';
 import '../../../widgets/custom.button.dart';
-import '../../../widgets/space.dart';
 
-class OtpScreen extends StatefulWidget {
-  const OtpScreen({Key? key}) : super(key: key);
+class OTPPage extends StatelessWidget {
+  final TextEditingController controller = TextEditingController();
 
-  @override
-  State<OtpScreen> createState() => _OtpScreenState();
-}
-
-class _OtpScreenState extends State<OtpScreen> {
-  late OTPController otpController;
-
-  @override
-  void initState() {
-    otpController = Get.put(OTPController());
-    // TODO: implement initState
-    super.initState();
-  }
+  OTPPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return AppBackground(
-      image: Images.otpBg,
-      child: DefaultAppLayout(
-          child: ColorfulSafeArea(
-        color: Colors.black,
+    return DefaultAppLayout(
+        bgImage: Images.otpBg,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Space().setVertical(0.16),
+            138.verticalSpace(),
             const AppLogo(height: 86, width: 76),
-            Space().setVertical(0.08),
+            58.verticalSpace(),
             Label(
               text:
                   "Please enter the verification code \n             sent to your mobile.",
@@ -53,10 +32,9 @@ class _OtpScreenState extends State<OtpScreen> {
               fontSize: 12,
               color: DefaultTheme().white,
             ),
-            Space().setVertical(0.06),
+            35.verticalSpace(),
             Flexible(
               child: Form(
-                key: otpController.formKey,
                 child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: Get.width * 0.11),
                     child: PinCodeTextField(
@@ -93,7 +71,7 @@ class _OtpScreenState extends State<OtpScreen> {
                       cursorColor: Colors.grey.shade600,
                       animationDuration: Duration(milliseconds: 300),
                       // errorAnimationController: errorController,
-                      controller: otpController.controller,
+                      controller: controller,
                       keyboardType: TextInputType.number,
                       onCompleted: (pin) {},
                       onChanged: (value) {},
@@ -105,12 +83,10 @@ class _OtpScreenState extends State<OtpScreen> {
                     )),
               ),
             ),
-            Space().setVertical(0.06),
+            35.verticalSpace(),
             confirmButton(),
           ],
-        ),
-      )),
-    );
+        ));
   }
 
   confirmButton() {

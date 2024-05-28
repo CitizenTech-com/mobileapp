@@ -2,7 +2,6 @@ import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;

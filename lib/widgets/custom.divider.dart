@@ -1,9 +1,6 @@
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
-import '../utils/colors.dart';
 
 class CustomDivider extends StatelessWidget {
   const CustomDivider({super.key});
