@@ -1,29 +1,20 @@
 import 'package:geolocator/geolocator.dart';
 
 class SplashRepository {
-  Future<Position?> getDeviceLocation() async {
-    final bool isLocationServiceEnabled =
-        await Geolocator.isLocationServiceEnabled();
-
-    if (isLocationServiceEnabled) {
-      final LocationPermission locationPermission =
-          await Geolocator.checkPermission();
-
-      if (locationPermission == LocationPermission.always ||
-          locationPermission == LocationPermission.whileInUse) {
-        return await Geolocator.getCurrentPosition();
-      }
-    }
-
-    return null;
-
-    // permission = await Geolocator.checkPermission();
-    // if (permission == LocationPermission.denied) {
-    //   permission = await Geolocator.requestPermission();
-    // }
-    // return await Geolocator.getCurrentPosition();
-  }
+  Future<Position?> getDeviceLocation() async =>
+      await Geolocator.getCurrentPosition();
 
   Future<void> requestLocationPermission() async =>
       await Geolocator.requestPermission();
+
+  Future<bool> isLocationServiceEnabled() async =>
+      await Geolocator.isLocationServiceEnabled();
+
+  Future<bool> isLocationPermissionGranted() async {
+    final LocationPermission locationPermission =
+        await Geolocator.checkPermission();
+
+    return (locationPermission == LocationPermission.always ||
+        locationPermission == LocationPermission.whileInUse);
+  }
 }

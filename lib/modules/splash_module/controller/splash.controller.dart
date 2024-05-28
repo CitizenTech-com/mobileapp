@@ -1,35 +1,28 @@
+import 'package:Citizen.Tech/modules/splash_module/repo/splash.repo.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
-  late bool servicePermission = false;
-  late LocationPermission permission;
+  final SplashRepository repo;
+  RxBool isLocationServiceEnabled = false.obs;
+  RxBool isLocationPermissionGranted = false.obs;
+  Rx<Position?> deviceLocation = null.obs;
+  SplashController({required this.repo});
 
   @override
-  void onInit() {
+  void onInit() async {
     super.onInit();
-    getLocation();
-  }
 
-  Future<Position> _getCurrentLocation() async {
-    servicePermission = await Geolocator.isLocationServiceEnabled();
+    isLocationServiceEnabled(await repo.isLocationServiceEnabled());
+    isLocationPermissionGranted(await repo.isLocationPermissionGranted());
 
-    if (!servicePermission) {
-      print("Service Disabled");
+    if (isLocationServiceEnabled.isTrue && isLocationPermissionGranted.isTrue) {
+      deviceLocation(await repo.getDeviceLocation());
+    } else {
+      deviceLocation(null);
     }
-
-    permission = await Geolocator.checkPermission();
-
-    if (permission == LocationPermission.denied) {
-      permission = await Geolocator.requestPermission();
-    }
-
-    return await Geolocator.getCurrentPosition();
   }
 
-  getLocation() async {
-    Position currentLocation = await _getCurrentLocation();
-    print(currentLocation.latitude);
-    // call api to current location data on server.
-  }
+  Future<void> requestLocationPermission() async =>
+      await repo.requestLocationPermission();
 }

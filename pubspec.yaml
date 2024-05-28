@@ -33,7 +33,7 @@ dependencies:
     sdk: flutter
   get: ^4.6.6
   flutter_svg: ^2.0.10+1
-  google_fonts: ^4.0.3
+  google_fonts: ^6.2.1
   pin_code_fields: ^8.0.1
   geolocator: ^12.0.0
   form_field_validator: ^1.1.0
