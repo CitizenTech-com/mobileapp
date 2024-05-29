@@ -2,6 +2,7 @@ import 'package:Citizen.Tech/modules/authentication_module/repo/registration.rep
 import 'package:get/get.dart';
 
 class RegistrationController extends GetxController {
+  final RxBool isTermsCheck = false.obs;
   final RegistrationRepository repo;
   final RxString userName = "".obs;
   final RxString email = "".obs;

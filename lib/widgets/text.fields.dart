@@ -120,7 +120,7 @@ class _InputTextFieldState extends State<InputTextField> {
             ? IconButton(
                 icon: Icon(
                     _obscureText ? Icons.visibility_off : Icons.visibility,
-                    color: Theme.of(context).hintColor.withOpacity(0.3)),
+                    color: DefaultTheme().white.withOpacity(0.5)),
                 onPressed: _toggle,
               )
             : null,
