@@ -45,5 +45,9 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>Access to the location is needed for the app when open.</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Access to the location is needed when in the background.</string>
 </dict>
 </plist>
