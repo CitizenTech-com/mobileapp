@@ -22,29 +22,48 @@ class SplashPage extends GetView<SplashController> {
   Widget build(BuildContext context) {
     return DefaultAppLayout(
         bgImage: Images.splashBg,
-        child: Obx(() => controller.deviceLocation.value == null
-            ? Center(child: CircularProgressIndicator(
-          backgroundColor: DefaultTheme().white,
-          color: DefaultTheme().background,
-        ))
-            : Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  145.verticalSpace(),
-                  const AppLogo(height: 172, width: 154),
-                  130.verticalSpace(),
-                  Label(
-                    text: "Lorem ipsum dolor sit \n      Let’s help you!",
-                    style: DefaultTheme().labelBold,
-                    fontSize: 22,
-                    color: DefaultTheme().white,
-                  ),
-                  19.verticalSpace(),
-                  communityButton(),
-                  25.verticalSpace(),
-                  alreadyUser()
-                ],
-              )));
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            145.verticalSpace(),
+            const AppLogo(height: 172, width: 154),
+            130.verticalSpace(),
+            Label(
+              text: "Lorem ipsum dolor sit \n      Let’s help you!",
+              style: DefaultTheme().labelBold,
+              fontSize: 22,
+              color: DefaultTheme().white,
+            ),
+            19.verticalSpace(),
+            communityButton(),
+            25.verticalSpace(),
+            alreadyUser()
+          ],
+        )
+        // child: Obx(() => controller.deviceLocation.value == null
+        //     ? Center(child: CircularProgressIndicator(
+        //   backgroundColor: DefaultTheme().white,
+        //   color: DefaultTheme().background,
+        // ))
+        //     : Column(
+        //         crossAxisAlignment: CrossAxisAlignment.center,
+        //         children: [
+        //           145.verticalSpace(),
+        //           const AppLogo(height: 172, width: 154),
+        //           130.verticalSpace(),
+        //           Label(
+        //             text: "Lorem ipsum dolor sit \n      Let’s help you!",
+        //             style: DefaultTheme().labelBold,
+        //             fontSize: 22,
+        //             color: DefaultTheme().white,
+        //           ),
+        //           19.verticalSpace(),
+        //           communityButton(),
+        //           25.verticalSpace(),
+        //           alreadyUser()
+        //         ],
+        //       ))
+        );
   }
 
   communityButton() {
