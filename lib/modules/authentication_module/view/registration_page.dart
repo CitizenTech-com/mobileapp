@@ -59,7 +59,7 @@ class RegistrationPage extends GetView<RegistrationController> {
           Label(
             text: "Join Us",
             style: DefaultTheme().labelRegular,
-            fontSize: 36,
+            fontSize: 32,
             color: DefaultTheme().white,
           ),
         ],
@@ -75,7 +75,7 @@ class RegistrationPage extends GetView<RegistrationController> {
         child: Column(
           children: [
             InputTextField(
-                hintText: "User Name",
+                hintText: "Full Name",
                 onChanged: (value) => controller.userName(value),
                 isBorder: true),
             const SizedBox(
@@ -112,14 +112,16 @@ class RegistrationPage extends GetView<RegistrationController> {
             InputTextField(
                 hintText: "Password",
                 onChanged: (value) => controller.password(value),
-                isBorder: true),
+                isBorder: true,
+                isPassword: true),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
                 hintText: "Confirm Password",
                 onChanged: (value) => controller.confirmPassword(value),
-                isBorder: true),
+                isBorder: true,
+                isPassword: true),
           ],
         ),
       ),
@@ -133,21 +135,18 @@ class RegistrationPage extends GetView<RegistrationController> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Checkbox(
-            checkColor: MyColors.black,
-            activeColor: MyColors.white,
-            side: const BorderSide(
-              color: MyColors.white,
-              width: 1.5,
-            ),
-            value: false,
-            onChanged: (bool? value) {},
-            // onChanged: (value) {
-            //   setState(() {
-            //     isChecked = value!;
-            //   });
-            // },
-          ),
+          Obx(() => Checkbox(
+                checkColor: MyColors.black,
+                activeColor: MyColors.white,
+                side: const BorderSide(
+                  color: MyColors.white,
+                  width: 1.5,
+                ),
+                value: controller.isTermsCheck.value,
+                onChanged: (bool? value) {
+                  controller.isTermsCheck(value);
+                },
+              )),
           Flexible(
             child: RichText(
               text: TextSpan(
@@ -242,7 +241,7 @@ class RegistrationPage extends GetView<RegistrationController> {
           )),
           children: <TextSpan>[
             TextSpan(
-                text: ' Log in',
+                text: ' Sign in',
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(
                         color: Colors.white,
