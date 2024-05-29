@@ -12,14 +12,14 @@ class SplashController extends GetxController {
   @override
   void onInit() async {
     super.onInit();
-
     isLocationServiceEnabled(await repo.isLocationServiceEnabled());
     isLocationPermissionGranted(await repo.isLocationPermissionGranted());
 
     if (isLocationServiceEnabled.isTrue && isLocationPermissionGranted.isTrue) {
       deviceLocation(await repo.getDeviceLocation());
     } else {
-      deviceLocation(null);
+      // deviceLocation(null);
+      requestLocationPermission();
     }
   }
 

@@ -22,8 +22,11 @@ class SplashPage extends GetView<SplashController> {
   Widget build(BuildContext context) {
     return DefaultAppLayout(
         bgImage: Images.splashBg,
-        child: Obx(() => controller.deviceLocation == null
-            ? CircularProgressIndicator()
+        child: Obx(() => controller.deviceLocation.value == null
+            ? Center(child: CircularProgressIndicator(
+          backgroundColor: DefaultTheme().white,
+          color: DefaultTheme().background,
+        ))
             : Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
