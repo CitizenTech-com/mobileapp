@@ -1,4 +1,4 @@
-import 'package:Citizen.Tech/modules/authentication_module/repo/registration.repo.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/repo/registration.repo.dart';
 import 'package:get/get.dart';
 
 class RegistrationController extends GetxController {

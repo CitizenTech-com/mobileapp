@@ -4,7 +4,7 @@ import 'package:Citizen.Tech/utils/colors.dart';
 import 'package:Citizen.Tech/utils/images.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
-import 'package:Citizen.Tech/widgets/custom.button.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.button.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -27,7 +27,7 @@ class OTPPage extends StatelessWidget {
             58.verticalSpace(),
             Label(
               text:
-                  "Please enter the verification code \n             sent to your mobile.",
+              "Please enter the verification code \n             sent to your mobile.",
               style: DefaultTheme().labelRegular,
               fontSize: 12,
               color: DefaultTheme().white,
@@ -90,7 +90,7 @@ class OTPPage extends StatelessWidget {
   }
 
   confirmButton() {
-    return CustomButton(
+    return CZNTechButton(
       onPressed: () {},
       width: Get.width,
       text: "Confirm",
