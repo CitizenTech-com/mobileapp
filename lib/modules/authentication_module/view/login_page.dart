@@ -1,5 +1,4 @@
 import 'dart:ffi';
-
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
 import 'package:Citizen.Tech/modules/authentication_module/controller/login.controller.dart';
@@ -42,7 +41,9 @@ class LoginPage extends GetView<LoginController> {
             const CustomDivider(),
             15.verticalSpace(),
             loginWithText(),
+            40.verticalSpace(),
             socialMediaButtons(),
+            80.verticalSpace(),
           ],
         ),
       ),
@@ -148,7 +149,7 @@ class LoginPage extends GetView<LoginController> {
             Get.toNamed(Routes.otp);
           },
           width: Get.width,
-          text: "Sign In",
+          text: "Sign in",
           textStyle: DefaultTheme().labelSemiBold,
           fontSize: 14,
           color: DefaultTheme().gold,
@@ -189,7 +190,7 @@ class LoginPage extends GetView<LoginController> {
           )),
           children: <TextSpan>[
             TextSpan(
-                text: ' Sign Up',
+                text: ' Sign up',
                 style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                         color: Colors.white,

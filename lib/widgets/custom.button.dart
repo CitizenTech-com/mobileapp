@@ -22,7 +22,7 @@ class CustomButton extends StatelessWidget {
       required this.onPressed,
       this.isTransparent = false,
       this.isBorder = false,
-      this.height = 40,
+      this.height = 42,
       this.width = 250,
       this.radius = 5,
       this.color = Colors.blue,

@@ -38,7 +38,7 @@ class RegistrationPage extends GetView<RegistrationController> {
               15.verticalSpace(),
               const CustomDivider(),
               15.verticalSpace(),
-              connectWithText(),
+              loginWithText(),
               40.verticalSpace(),
               socialMediaButtons(),
               80.verticalSpace(),
@@ -112,16 +112,14 @@ class RegistrationPage extends GetView<RegistrationController> {
             InputTextField(
                 hintText: "Password",
                 onChanged: (value) => controller.password(value),
-                isBorder: true,
-                isPassword: true),
+                isBorder: true,),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
                 hintText: "Confirm Password",
                 onChanged: (value) => controller.confirmPassword(value),
-                isBorder: true,
-                isPassword: true),
+                isBorder: true,),
           ],
         ),
       ),
@@ -221,7 +219,7 @@ class RegistrationPage extends GetView<RegistrationController> {
         // Get.toNamed(Routes.registration);
       },
       width: Get.width,
-      text: "Sign Up",
+      text: "Sign up",
       textStyle: DefaultTheme().labelSemiBold,
       fontSize: 14,
       color: DefaultTheme().gold,
@@ -255,9 +253,9 @@ class RegistrationPage extends GetView<RegistrationController> {
     );
   }
 
-  connectWithText() {
+  loginWithText() {
     return Label(
-      text: "Connect with",
+      text: "Login with",
       style: DefaultTheme().labelRegular,
       fontSize: 12,
       color: DefaultTheme().white,
