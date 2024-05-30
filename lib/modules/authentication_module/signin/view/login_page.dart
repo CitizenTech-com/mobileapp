@@ -1,15 +1,14 @@
 import 'dart:ffi';
-
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
-import 'package:Citizen.Tech/modules/authentication_module/controller/login.controller.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signin/controller/login.controller.dart';
 import 'package:Citizen.Tech/utils/colors.dart';
 import 'package:Citizen.Tech/utils/images.dart';
 import 'package:Citizen.Tech/utils/routes.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
-import 'package:Citizen.Tech/widgets/custom.button.dart';
-import 'package:Citizen.Tech/widgets/custom.divider.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.button.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.divider.dart';
 import 'package:Citizen.Tech/widgets/text.fields.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/gestures.dart';
@@ -39,10 +38,12 @@ class LoginPage extends GetView<LoginController> {
             loginButton(),
             signUp(),
             15.verticalSpace(),
-            const CustomDivider(),
+            const CZNTechDivider(),
             15.verticalSpace(),
             loginWithText(),
+            40.verticalSpace(),
             socialMediaButtons(),
+            80.verticalSpace(),
           ],
         ),
       ),
@@ -112,17 +113,17 @@ class LoginPage extends GetView<LoginController> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Obx(() => Checkbox(
-                checkColor: MyColors.black,
-                activeColor: MyColors.white,
-                side: const BorderSide(
-                  color: MyColors.white,
-                  width: 1.5,
-                ),
-                value: controller.isChecked.value,
-                onChanged: (bool? value) {
-                  controller.isChecked(value);
-                },
-              )),
+            checkColor: MyColors.black,
+            activeColor: MyColors.white,
+            side: const BorderSide(
+              color: MyColors.white,
+              width: 1.5,
+            ),
+            value: controller.isChecked.value,
+            onChanged: (bool? value) {
+              controller.isChecked(value);
+            },
+          )),
           Flexible(
             child: Label(
               text: "Remember Me",
@@ -140,7 +141,7 @@ class LoginPage extends GetView<LoginController> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        CustomButton(
+        CZNTechButton(
           onPressed: () {
             // Get.dialog(Text());
             // print(loginController.userName.text.trim());
@@ -148,14 +149,14 @@ class LoginPage extends GetView<LoginController> {
             Get.toNamed(Routes.otp);
           },
           width: Get.width,
-          text: "Sign In",
+          text: "Sign in",
           textStyle: DefaultTheme().labelSemiBold,
           fontSize: 14,
           color: DefaultTheme().gold,
           padding: 0.13,
         ),
         8.verticalSpace(),
-        CustomButton(
+        CZNTechButton(
             onPressed: () {
               Get.toNamed(Routes.registration);
             },
@@ -183,13 +184,13 @@ class LoginPage extends GetView<LoginController> {
           text: 'New User? ',
           style: GoogleFonts.poppins(
               textStyle: const TextStyle(
-            color: Colors.white,
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-          )),
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              )),
           children: <TextSpan>[
             TextSpan(
-                text: ' Sign Up',
+                text: ' Sign up',
                 style: GoogleFonts.poppins(
                     textStyle: const TextStyle(
                         color: Colors.white,

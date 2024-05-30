@@ -8,7 +8,7 @@ import 'package:Citizen.Tech/utils/images.dart';
 import 'package:Citizen.Tech/utils/routes.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
-import 'package:Citizen.Tech/widgets/custom.button.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.button.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -67,7 +67,7 @@ class SplashPage extends GetView<SplashController> {
   }
 
   communityButton() {
-    return CustomButton(
+    return CZNTechButton(
       onPressed: () {
         Get.toNamed(Routes.registration);
       },

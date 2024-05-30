@@ -1,11 +1,11 @@
-import 'package:Citizen.Tech/modules/authentication_module/bindings/login.binding.dart';
-import 'package:Citizen.Tech/modules/authentication_module/bindings/registration.binding.dart';
-import 'package:Citizen.Tech/modules/authentication_module/view/login_page.dart';
-import 'package:Citizen.Tech/modules/authentication_module/view/otp_page.dart';
-import 'package:Citizen.Tech/modules/authentication_module/view/registration_page.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signin/bindings/login.binding.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/bindings/registration.binding.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signin/view/login_page.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/view/otp_page.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/view/registration_page.dart';
 import 'package:Citizen.Tech/modules/splash_module/bindings/splash.binding.dart';
+import 'package:Citizen.Tech/modules/splash_module/view/splash.view.dart';
 import 'package:get/get.dart';
-import '../modules/splash_module/view/splash.view.dart';
 
 class Routes {
   static String splash = '/splash';
