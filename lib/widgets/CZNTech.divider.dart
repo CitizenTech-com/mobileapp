@@ -2,8 +2,8 @@ import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/material.dart';
 
-class CustomDivider extends StatelessWidget {
-  const CustomDivider({super.key});
+class CZNTechDivider extends StatelessWidget {
+  const CZNTechDivider({super.key});
 
   @override
   Widget build(BuildContext context) {

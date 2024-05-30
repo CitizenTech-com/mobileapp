@@ -3,7 +3,7 @@ import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class CustomButton extends StatelessWidget {
+class CZNTechButton extends StatelessWidget {
   final VoidCallback onPressed;
   final bool isTransparent;
   final bool isBorder;
@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
   final double padding;
   final TextStyle textStyle;
 
-  const CustomButton(
+  const CZNTechButton(
       {super.key,
       required this.onPressed,
       this.isTransparent = false,

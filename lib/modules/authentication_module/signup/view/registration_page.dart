@@ -1,13 +1,13 @@
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
-import 'package:Citizen.Tech/modules/authentication_module/controller/registration.controller.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/controller/registration.controller.dart';
 import 'package:Citizen.Tech/utils/colors.dart';
 import 'package:Citizen.Tech/utils/images.dart';
 import 'package:Citizen.Tech/utils/routes.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
-import 'package:Citizen.Tech/widgets/custom.button.dart';
-import 'package:Citizen.Tech/widgets/custom.divider.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.button.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.divider.dart';
 import 'package:Citizen.Tech/widgets/text.fields.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/gestures.dart';
@@ -36,9 +36,9 @@ class RegistrationPage extends GetView<RegistrationController> {
               20.verticalSpace(),
               alreadyHaveAccount(),
               15.verticalSpace(),
-              const CustomDivider(),
+              const CZNTechDivider(),
               15.verticalSpace(),
-              connectWithText(),
+              loginWithText(),
               40.verticalSpace(),
               socialMediaButtons(),
               80.verticalSpace(),
@@ -110,18 +110,16 @@ class RegistrationPage extends GetView<RegistrationController> {
               height: 10,
             ),
             InputTextField(
-                hintText: "Password",
-                onChanged: (value) => controller.password(value),
-                isBorder: true,
-                isPassword: true),
+              hintText: "Password",
+              onChanged: (value) => controller.password(value),
+              isBorder: true,),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                hintText: "Confirm Password",
-                onChanged: (value) => controller.confirmPassword(value),
-                isBorder: true,
-                isPassword: true),
+              hintText: "Confirm Password",
+              onChanged: (value) => controller.confirmPassword(value),
+              isBorder: true,),
           ],
         ),
       ),
@@ -136,27 +134,27 @@ class RegistrationPage extends GetView<RegistrationController> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Obx(() => Checkbox(
-                checkColor: MyColors.black,
-                activeColor: MyColors.white,
-                side: const BorderSide(
-                  color: MyColors.white,
-                  width: 1.5,
-                ),
-                value: controller.isTermsCheck.value,
-                onChanged: (bool? value) {
-                  controller.isTermsCheck(value);
-                },
-              )),
+            checkColor: MyColors.black,
+            activeColor: MyColors.white,
+            side: const BorderSide(
+              color: MyColors.white,
+              width: 1.5,
+            ),
+            value: controller.isTermsCheck.value,
+            onChanged: (bool? value) {
+              controller.isTermsCheck(value);
+            },
+          )),
           Flexible(
             child: RichText(
               text: TextSpan(
                   text: 'I agree to all Term, ',
                   style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                  )),
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      )),
                   children: <TextSpan>[
                     TextSpan(
                         text: 'Privacy Policy',
@@ -174,9 +172,9 @@ class RegistrationPage extends GetView<RegistrationController> {
                       text: ' and Fees.',
                       style: GoogleFonts.poppins(
                           textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                      )),
+                            color: Colors.white,
+                            fontSize: 12,
+                          )),
                       // navigate to desired screen
                     )
                   ]),
@@ -197,10 +195,10 @@ class RegistrationPage extends GetView<RegistrationController> {
             child: Text("Terms & Conditions",
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                  color: MyColors.black,
-                  fontSize: 22,
-                  fontWeight: FontWeight.w600,
-                ))),
+                      color: MyColors.black,
+                      fontSize: 22,
+                      fontWeight: FontWeight.w600,
+                    ))),
           ),
           SizedBox(
             height: 5,
@@ -216,12 +214,12 @@ class RegistrationPage extends GetView<RegistrationController> {
   }
 
   signUpButton() {
-    return CustomButton(
+    return CZNTechButton(
       onPressed: () {
         // Get.toNamed(Routes.registration);
       },
       width: Get.width,
-      text: "Sign Up",
+      text: "Sign up",
       textStyle: DefaultTheme().labelSemiBold,
       fontSize: 14,
       color: DefaultTheme().gold,
@@ -235,10 +233,10 @@ class RegistrationPage extends GetView<RegistrationController> {
           text: 'Already have an account? ',
           style: GoogleFonts.poppins(
               textStyle: TextStyle(
-            color: Colors.white,
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-          )),
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              )),
           children: <TextSpan>[
             TextSpan(
                 text: ' Sign in',
@@ -255,9 +253,9 @@ class RegistrationPage extends GetView<RegistrationController> {
     );
   }
 
-  connectWithText() {
+  loginWithText() {
     return Label(
-      text: "Connect with",
+      text: "Login with",
       style: DefaultTheme().labelRegular,
       fontSize: 12,
       color: DefaultTheme().white,
