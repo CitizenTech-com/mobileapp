@@ -5,13 +5,15 @@ import 'package:google_fonts/google_fonts.dart';
 
 class InputTextField extends StatefulWidget {
   final String hintText;
+
   // final TextEditingController controller;
   final FocusNode? focusNode;
   final FocusNode? nextFocus;
   final TextInputType inputType;
   final TextInputAction inputAction;
   final bool isPassword;
-  final Function? onChanged;
+  final Function(String)? onChanged;
+  final String? Function(String?)? validate;
   final Function? onSubmit;
   final bool isEnabled;
   final bool isBorder;
@@ -25,7 +27,7 @@ class InputTextField extends StatefulWidget {
   final bool isNumber;
   final bool showTitle;
 
-  const InputTextField(
+  InputTextField(
       {super.key,
       this.hintText = 'Write something...',
       this.focusNode,
@@ -45,7 +47,8 @@ class InputTextField extends StatefulWidget {
       this.textAlign = TextAlign.start,
       this.isAmount = false,
       this.isNumber = false,
-      this.showTitle = false});
+      this.showTitle = false,
+      this.validate});
 
   @override
   State<InputTextField> createState() => _InputTextFieldState();
@@ -79,8 +82,10 @@ class _InputTextFieldState extends State<InputTextField> {
       decoration: InputDecoration(
         border: widget.isBorder
             ? OutlineInputBorder(
-                borderRadius: BorderRadius.circular(5),
-                borderSide: const BorderSide(style: BorderStyle.none, width: 0),
+                borderRadius: BorderRadius.circular(10),
+                borderSide: BorderSide(
+                  color: DefaultTheme().textFieldBorder,
+                ),
               )
             : null,
         enabledBorder: widget.isBorder
@@ -107,8 +112,22 @@ class _InputTextFieldState extends State<InputTextField> {
                   color: DefaultTheme().textFieldBorder,
                 ),
               ),
+        errorBorder: widget.isBorder
+            ? OutlineInputBorder(
+                borderRadius: BorderRadius.circular(10.0),
+                borderSide: BorderSide(
+                  color: DefaultTheme().red,
+                ),
+              )
+            : UnderlineInputBorder(
+                borderSide: BorderSide(
+                  color: DefaultTheme().red,
+                ),
+              ),
         hintText: widget.hintText,
         hintStyle: GoogleFonts.poppins(
+            textStyle: DefaultTheme().labelRegular.copyWith(fontSize: 13)),
+        errorStyle: GoogleFonts.poppins(
             textStyle: DefaultTheme().labelRegular.copyWith(fontSize: 13)),
         prefixIcon: widget.prefixIcon != null
             ? Padding(
@@ -125,7 +144,8 @@ class _InputTextFieldState extends State<InputTextField> {
               )
             : null,
       ),
-      onChanged: (String str) {},
+      onChanged: widget.onChanged,
+      validator: widget.validate,
       style: GoogleFonts.poppins(
           textStyle: DefaultTheme().labelRegular.copyWith(fontSize: 13)),
     );

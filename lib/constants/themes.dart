@@ -11,6 +11,7 @@ class DefaultTheme {
   // colors define here.
   Color black = const Color(0xFF000000);
   Color white = const Color(0xFFffffff);
+  Color red = const Color(0xFFFF0000);
   Color background = const Color(0xff7D000C);
   Color gold = const Color(0xffBF9D56);
   Color facebook = const Color(0xff1877F2);

@@ -1,9 +1,15 @@
+import 'dart:ffi';
 import 'package:Citizen.Tech/constants/themes.dart';
 import 'package:Citizen.Tech/extensions/number.extensions.dart';
 import 'package:Citizen.Tech/modules/authentication_module/signup/controller/registration.controller.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/view/widgets/address.dropdown.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/view/widgets/country.code.dropdown.dart';
+import 'package:Citizen.Tech/modules/authentication_module/signup/view/widgets/postcode.dropdown.dart';
 import 'package:Citizen.Tech/utils/colors.dart';
+import 'package:Citizen.Tech/utils/helpers/country.codes.dart';
 import 'package:Citizen.Tech/utils/images.dart';
 import 'package:Citizen.Tech/utils/routes.dart';
+import 'package:Citizen.Tech/widgets/CZNTech.snackbar.dart';
 import 'package:Citizen.Tech/widgets/app.layout.dart';
 import 'package:Citizen.Tech/widgets/app.logo.dart';
 import 'package:Citizen.Tech/widgets/CZNTech.button.dart';
@@ -12,6 +18,7 @@ import 'package:Citizen.Tech/widgets/text.fields.dart';
 import 'package:Citizen.Tech/widgets/texts.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -72,54 +79,126 @@ class RegistrationPage extends GetView<RegistrationController> {
       width: Get.width,
       padding: EdgeInsets.only(left: Get.width * 0.11, right: Get.width * 0.11),
       child: Form(
+        key: controller.formKey,
         child: Column(
           children: [
             InputTextField(
-                hintText: "Full Name",
-                onChanged: (value) => controller.userName(value),
-                isBorder: true),
+              key: Key("name"),
+              hintText: "Full Name",
+              onChanged: (value) => controller.firstName(value),
+              isBorder: true,
+              validate: MultiValidator([
+                RequiredValidator(errorText: 'Full name is required'),
+                MaxLengthValidator(30,
+                    errorText: "Maximum 30 characters allowed"),
+                PatternValidator(r'^[a-zA-Z0-9]+$',
+                    errorText: 'Special characters not allowed')
+              ]),
+            ),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
                 hintText: "Email",
                 onChanged: (value) => controller.email(value),
-                isBorder: true),
+                isBorder: true,
+                validate: MultiValidator([
+                  RequiredValidator(errorText: 'Email is required'),
+                  EmailValidator(errorText: 'Please enter correct email'),
+                ])),
+            const SizedBox(
+              height: 10,
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CountryCodeDropdown(
+                  controller: controller,
+                  items: countryCodes,
+                  dropdownColor: DefaultTheme().background,
+                  style: GoogleFonts.poppins(
+                      textStyle:
+                          DefaultTheme().labelRegular.copyWith(fontSize: 13)),
+                ),
+                8.horizontalSpace(),
+                Flexible(
+                  flex: 2,
+                  child: InputTextField(
+                    hintText: "Phone",
+                    onChanged: (value) => controller.phone(value),
+                    isBorder: true,
+                    inputType: TextInputType.number,
+                    validate: MultiValidator([
+                      RequiredValidator(errorText: 'Phone number is required'),
+                    ]),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            PostCodeDropdown(
+              controller: controller,
+              items: [],
+              dropdownColor: DefaultTheme().background,
+              style: GoogleFonts.poppins(
+                  textStyle:
+                      DefaultTheme().labelRegular.copyWith(fontSize: 13)),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            Obx(() => AddressDropdown(
+                  controller: controller,
+                  items: controller.postCodeJson.value.addresses,
+                  dropdownColor: DefaultTheme().background,
+                  style: GoogleFonts.poppins(
+                      textStyle:
+                          DefaultTheme().labelRegular.copyWith(fontSize: 13)),
+                )),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
-                hintText: "Phone",
-                onChanged: (value) => controller.phone(value),
-                isBorder: true),
-            const SizedBox(
-              height: 10,
-            ),
-            InputTextField(
-                hintText: "Post Code",
-                onChanged: (value) => controller.postCode(value),
-                isBorder: true),
-            const SizedBox(
-              height: 10,
-            ),
-            InputTextField(
-                hintText: "Address",
-                onChanged: (value) => controller.address(value),
-                isBorder: true),
-            const SizedBox(
-              height: 10,
-            ),
-            InputTextField(
-              hintText: "Password",
-              onChanged: (value) => controller.password(value),
-              isBorder: true,),
+                hintText: "Password",
+                onChanged: (value) => controller.password(value),
+                isBorder: true,
+                validate: (value) {
+                  if (value!.isEmpty) {
+                    return "Password is required";
+                  }
+                  if (!RegExp(r'[A-Z]').hasMatch(value)) {
+                    return "Password should be start with capital letter";
+                  }
+                  if (value.length < 8) {
+                    return "Minimum 8 characters allowed";
+                  }
+                  if (value.length > 20) {
+                    return "Maximum 20 characters allowed";
+                  }
+                  if (!RegExp(r'[!@#$%^&*(),.?":{}|<>]').hasMatch(value)) {
+                    return "Password required one special character";
+                  }
+                  return null;
+                }),
             const SizedBox(
               height: 10,
             ),
             InputTextField(
               hintText: "Confirm Password",
               onChanged: (value) => controller.confirmPassword(value),
-              isBorder: true,),
+              isBorder: true,
+              validate: (value) {
+                if (value!.isEmpty) {
+                  return "Password is required";
+                }
+                if (value!=controller.password.value) {
+                  return "Confirm password not matched";
+                }
+                return null;
+              },
+            ),
           ],
         ),
       ),
@@ -134,27 +213,27 @@ class RegistrationPage extends GetView<RegistrationController> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Obx(() => Checkbox(
-            checkColor: MyColors.black,
-            activeColor: MyColors.white,
-            side: const BorderSide(
-              color: MyColors.white,
-              width: 1.5,
-            ),
-            value: controller.isTermsCheck.value,
-            onChanged: (bool? value) {
-              controller.isTermsCheck(value);
-            },
-          )),
+                checkColor: MyColors.black,
+                activeColor: MyColors.white,
+                side: const BorderSide(
+                  color: MyColors.white,
+                  width: 1.5,
+                ),
+                value: controller.isTermsCheck.value,
+                onChanged: (bool? value) {
+                  controller.isTermsCheck(value);
+                },
+              )),
           Flexible(
             child: RichText(
               text: TextSpan(
                   text: 'I agree to all Term, ',
                   style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                      )),
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                  )),
                   children: <TextSpan>[
                     TextSpan(
                         text: 'Privacy Policy',
@@ -172,9 +251,9 @@ class RegistrationPage extends GetView<RegistrationController> {
                       text: ' and Fees.',
                       style: GoogleFonts.poppins(
                           textStyle: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                          )),
+                        color: Colors.white,
+                        fontSize: 12,
+                      )),
                       // navigate to desired screen
                     )
                   ]),
@@ -195,10 +274,10 @@ class RegistrationPage extends GetView<RegistrationController> {
             child: Text("Terms & Conditions",
                 style: GoogleFonts.poppins(
                     textStyle: TextStyle(
-                      color: MyColors.black,
-                      fontSize: 22,
-                      fontWeight: FontWeight.w600,
-                    ))),
+                  color: MyColors.black,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600,
+                ))),
           ),
           SizedBox(
             height: 5,
@@ -216,7 +295,7 @@ class RegistrationPage extends GetView<RegistrationController> {
   signUpButton() {
     return CZNTechButton(
       onPressed: () {
-        // Get.toNamed(Routes.registration);
+        register();
       },
       width: Get.width,
       text: "Sign up",
@@ -233,10 +312,10 @@ class RegistrationPage extends GetView<RegistrationController> {
           text: 'Already have an account? ',
           style: GoogleFonts.poppins(
               textStyle: TextStyle(
-                color: Colors.white,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              )),
+            color: Colors.white,
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+          )),
           children: <TextSpan>[
             TextSpan(
                 text: ' Sign in',
@@ -275,5 +354,44 @@ class RegistrationPage extends GetView<RegistrationController> {
         Image.asset(Images.lindedin)
       ],
     );
+  }
+
+  register() {
+    if (controller.formKey.currentState!.validate()) {
+      if (!controller.isTermsCheck.value) {
+        showCZNTechSnackBar("Please accept term & condition");
+      } else {
+        controller.register();
+      }
+    }
+  }
+
+  bool validateEmail(String email) {
+    if (email.contains(" ")) {
+      return true;
+    }
+    if (!email.contains(".")) {
+      return true;
+    }
+    if (!email.contains("@")) {
+      return true;
+    }
+    String firstIndex = "";
+    String secIndex = "";
+    var firstSplitString = email.split('@');
+    firstIndex = firstSplitString[0];
+    secIndex = firstSplitString[1];
+    if (firstIndex.isEmpty) {
+      return true;
+    }
+    var secSplitString = secIndex.split(".");
+    firstIndex = secSplitString[0];
+    secIndex = secSplitString[1];
+    if (firstIndex.isEmpty) {
+      return true;
+    } else if (secIndex.isEmpty) {
+      return true;
+    }
+    return false;
   }
 }
